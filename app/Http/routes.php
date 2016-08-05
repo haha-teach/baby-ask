@@ -12,13 +12,31 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $questions = App\Question::all()->reverse();
+
+    return view('welcome', ['questions' => $questions]);
 });
 
 Route::get('/ask', function () {
     return view('ask');
 });
 
-Route::get('/question', function () {
-    return view('question');
+Route::post('/ask', function () {
+    $q = new App\Question();
+
+    $q->title = Input::get('title');
+
+    $q->body = Input::get('body');
+
+    $q->email = Input::get('email');
+
+    $q->save();
+
+    return Redirect::to('/');
+});
+
+Route::get('/question/{id}', function ($id) {
+    $question = App\Question::find($id);
+
+    return view('question', ['question' => $question]);
 });

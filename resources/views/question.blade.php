@@ -4,22 +4,9 @@
 <div class="container">
     <div class="row">
         <div class="eight columns">
-            <h5>用python語言，如何找最小值(minimum value)的索引(index)</h5>
+            <h5>{{ $question->title }}</h5>
             <hr style='margin-top: 20px; margin-bottom: 20px;'/>
-            <div>
-如下的指令即可：
-<br /><br />
-# mysqldump -q -u $username -p $dbname
-<br /><br />
-因為 -q 選項會讓mysqldump不啟動記憶體的緩存，直接將取得的資料寫到檔案中，減少記憶體的使用。
-<br /><br />
- --quick, -q
-<br /><br />
-This option is useful for dumping large tables. It forces mysqldump to
-retrieve rows for a table from the server a row at a time rather than
-retrieving the entire row set and buffering it in memory before writing it
-out.
-            </div>
+            <div>{{ $question->body }}</div>
             <br />
             <div class="time">發問時間：2016-8-3 12:31</div>
             <div style="clear: both;"></div>

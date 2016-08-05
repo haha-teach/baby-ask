@@ -5,13 +5,13 @@
     <div class="row">
         <div class="eight columns">
             <h5>最新問題</h5>
-            @for ($i = 0; $i < 10; $i++)
+            @foreach($questions as $question)
             <div class="question-box">
-                <div class="title"><a href='#'>用python語言，如何找最小值(minimum value)的索引(index)</a></div>
-                <div class="time">發問時間：2016-8-3 12:31</div>
+                <div class="title"><a href='#'>{{ $question->title }}</a></div>
+                <div class="time">發問時間：{{ $question->created_at->format('Y-m-d H:i') }}</div>
                 <div style="clear: both;"></div>
             </div>
-            @endfor
+            @endforeach
         </div>
         <div class="four columns">
             <div>
