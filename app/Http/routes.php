@@ -38,5 +38,7 @@ Route::post('/ask', function () {
 Route::get('/question/{id}', function ($id) {
     $question = App\Question::find($id);
 
-    return view('question', ['question' => $question]);
+    $my_html = Michelf\Markdown::defaultTransform($question->body);
+
+    return view('question', ['question' => $question, 'my_html' => $my_html]);
 });

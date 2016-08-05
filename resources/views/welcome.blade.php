@@ -7,7 +7,7 @@
             <h5>最新問題</h5>
             @foreach($questions as $question)
             <div class="question-box">
-                <div class="title"><a href='#'>{{ $question->title }}</a></div>
+                <div class="title"><a href='/question/{{$question->id}}'>{{ $question->title }}</a></div>
                 <div class="time">發問時間：{{ $question->created_at->format('Y-m-d H:i') }}</div>
                 <div style="clear: both;"></div>
             </div>
