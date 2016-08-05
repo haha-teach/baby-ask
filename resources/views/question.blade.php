@@ -29,5 +29,9 @@
         float: right;
         color: #757575;
     }
+    pre {
+        font-size: 17px;
+        white-space:pre-wrap;
+    }
 </style>
 @stop
