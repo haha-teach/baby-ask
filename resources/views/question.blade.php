@@ -6,7 +6,7 @@
         <div class="eight columns">
             <h5>{{ $question->title }}</h5>
             <hr style='margin-top: 20px; margin-bottom: 20px;'/>
-            <div>{!! $my_html !!}</div>
+            <div><pre>{{ $question->body }}</pre></div>
             <br />
             <div class="time">發問時間：2016-8-3 12:31</div>
             <div style="clear: both;"></div>
