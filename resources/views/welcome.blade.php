@@ -37,7 +37,6 @@
     }
     .question-box > .time {
         color: #757575;
-        position: relative;
         float: right;
     }
 </style>
