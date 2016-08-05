@@ -1,5 +1,6 @@
 <html>
     <head>
+        <title>程式嬰兒の發問</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/css/skeleton-2.0.4/normalize.css">
         <link rel="stylesheet" href="/css/skeleton-2.0.4/skeleton.css">
