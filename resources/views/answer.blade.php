@@ -4,10 +4,11 @@
 <div class="container">
     <div class="row">
         <div class="eight columns">
-            <form class="ask-form" method='post' action="ask">
+            <form class="ask-form" method='post' action="/answer">
                 Answer<br />
                 <textarea class="u-full-width" name='body'></textarea>
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                <input type="hidden" name="question_id" value="{{ $question->id }}">
                 <input type="submit" value='Answer' class="button-primary" />
             </form>
         </div>

@@ -8,9 +8,11 @@
             <hr style='margin-top: 20px; margin-bottom: 20px;'/>
             <div><pre>{{ $question->body }}</pre></div>
             <br />
-            <div class="time">發問時間：2016-8-3 12:31</div>
+            <div class="time">發問時間：{{$question->created_at->format('Y-m-d H:i')}}</div>
             <div style="clear: both;"></div>
+            <!--
             <hr style='margin-top: 20px; margin-bottom: 20px;'/>
+            -->
         </div>
         <div class="four columns">
             <div>
@@ -23,6 +25,32 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <br />
+        <h3>回答</h3>
+    </div>
+    @if($question->answers->count() === 0)
+    <div class="row">
+        <div><pre>還沒有人回答唷！</pre></div>
+        <br />
+    </div>
+    @endif
+
+    @foreach($question->answers as $answer)
+    <div class="row">
+        <div class="eight columns">
+            <hr style='margin-top: 0px; margin-bottom: 20px;'/>
+            <div><pre>{{ $answer->body }}</pre></div>
+            <br />
+            <div class="time">回答時間：{{$answer->created_at->format('Y-m-d H:i')}}</div>
+            <div style="clear: both;"></div>
+            <!--
+            <hr style='margin-top: 20px; margin-bottom: 20px;'/>
+            -->
+            <br />
+        </div>
+    </div>
+    @endforeach
 </div>
 <style>
     .time {
@@ -30,6 +58,7 @@
         color: #757575;
     }
     pre {
+        margin-left: 40px;
         font-size: 17px;
         white-space:pre-wrap;
     }

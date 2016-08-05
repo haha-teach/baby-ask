@@ -46,3 +46,15 @@ Route::get('/answer/{id}', function ($id) {
 
     return view('answer', ['question' => $question]);
 });
+
+Route::post('/answer', function () {
+    $a = new App\Answer();
+
+    $a->question_id = Input::get('question_id');
+
+    $a->body = Input::get('body');
+
+    $a->save();
+
+    return Redirect::to('/');
+});
