@@ -58,6 +58,8 @@ Route::post('/answer', function () {
 
     $a->body = Input::get('body');
 
+    $a->user_id = Auth::user()->id;
+
     $a->save();
 
     return Redirect::to('/');
