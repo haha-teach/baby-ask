@@ -1,9 +1,9 @@
 <html>
     <head>
-        <title>程式嬰兒の發問</title>
+        <title>轉個彎方案：解決寫程式的各種問題</title>
 
-        <meta property="og:title" content="程式嬰兒の發問"/>
-        <meta property="og:description" content="給程式新手發問的問答網站！" />
+        <meta property="og:title" content="轉個彎方案：解決寫程式的各種問題"/>
+        <meta property="og:description" content="協助人們解決程式設計各種問題的問答網站。" />
         <meta property="og:image" content="http://class.turn.tw/wp-content/uploads/2016/07/boy.png" />
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,7 @@
             <div class="container">
                 <div class="row header-box">
                     <br />
-                    <a href='/'><h4>程式嬰兒の發問</h4></a>
+                    <a href='/'><h4>轉個彎方案<span style="color: black; font-size: 18px; padding-left: 15px;" >解決寫程式的各種問題</span></h4></a>
                 </div>
             </div>
         </div>
