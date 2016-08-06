@@ -8,7 +8,7 @@
             <hr style='margin-top: 20px; margin-bottom: 20px;'/>
             <div><pre>{{ $question->body }}</pre></div>
             <br />
-            <div class="time">發問時間：{{$question->created_at->format('Y-m-d H:i')}}</div>
+            <div class="asktime">發問時間：{{$question->created_at->format('Y-m-d H:i')}}</div>
             <div style="clear: both;"></div>
             <!--
             <hr style='margin-top: 20px; margin-bottom: 20px;'/>
@@ -69,6 +69,10 @@
 
 </div>
 <style>
+    .asktime {
+        float: right;
+        color: #757575;
+    }
     .info-box {
         float: right;
     }
