@@ -31,8 +31,8 @@
     </div>
     @if($question->answers->count() === 0)
     <div class="row">
+        <hr style='margin-top: 0px; margin-bottom: 20px;'/>
         <div><pre>還沒有人回答唷！</pre></div>
-        <br />
     </div>
     @endif
 
@@ -51,6 +51,19 @@
         </div>
     </div>
     @endforeach
+    <div class="row">
+        <div class="eight columns">
+            <hr style='margin-top: 0px; margin-bottom: 20px;'/>
+            <!--
+            <hr style='margin-top: 0px; margin-bottom: 20px;'/>
+            -->
+            <br />
+            <a href='/answer/{{$question->id}}'><h1 style="margin-left: 0px;">我要回答這個問題！</h1></a>
+            <br />
+            <br />
+        </div>
+    </div>
+
 </div>
 <style>
     .time {

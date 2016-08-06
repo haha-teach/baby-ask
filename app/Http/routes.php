@@ -42,6 +42,10 @@ Route::get('/question/{id}', function ($id) {
 });
 
 Route::get('/answer/{id}', function ($id) {
+    if (!Auth::check()) {
+        return Redirect::to('/login');
+    }
+
     $question = App\Question::find($id);
 
     return view('answer', ['question' => $question]);
