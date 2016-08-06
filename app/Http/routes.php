@@ -14,7 +14,7 @@
 Route::get('/', function () {
     $questions = App\Question::all()->reverse();
 
-    return view('welcome', ['questions' => $questions]);
+    return view('index', ['questions' => $questions]);
 });
 
 Route::get('/ask', function () {
@@ -58,3 +58,7 @@ Route::post('/answer', function () {
 
     return Redirect::to('/');
 });
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');

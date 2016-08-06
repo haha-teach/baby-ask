@@ -24,8 +24,14 @@
         <div class="container">
             <div class="row">
                 <ul class="nav-bar">
-                    <li><a href='/'>首頁</a></li>
+                    <li><a href='/'>逛逛首頁</a></li>
                     <li><a href='/ask'>我要發問</a></li>
+                    @if(Auth::check())
+                    <li><a href='/logout'>我要登出</a></li>
+                    @else
+                    <li><a href='/login'>我要登入</a></li>
+                    <li><a href='/register'>我要註冊</a></li>
+                    @endif
                 </ul>
             </div>
         </div>
