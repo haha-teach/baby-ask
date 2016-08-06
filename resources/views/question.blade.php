@@ -42,7 +42,10 @@
             <hr style='margin-top: 0px; margin-bottom: 20px;'/>
             <div><pre>{{ $answer->body }}</pre></div>
             <br />
-            <div class="time">回答時間：{{$answer->created_at->format('Y-m-d H:i')}}</div>
+            <div class="info-box">
+                <div class="time">回答時間：{{$answer->created_at->format('Y-m-d H:i')}}</div>
+                <div class="name">回答之人：{{$answer->user->name}}</div>
+            </div>
             <div style="clear: both;"></div>
             <!--
             <hr style='margin-top: 20px; margin-bottom: 20px;'/>
@@ -66,9 +69,14 @@
 
 </div>
 <style>
-    .time {
+    .info-box {
         float: right;
+    }
+    .time {
         color: #757575;
+    }
+    .name {
+
     }
     pre {
         margin-left: 40px;
