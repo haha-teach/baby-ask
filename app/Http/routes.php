@@ -18,6 +18,10 @@ Route::get('/', function () {
 });
 
 Route::get('/ask', function () {
+    if (!Auth::check()) {
+        return Redirect::to('/login');
+    }
+
     return view('ask');
 });
 
@@ -28,7 +32,7 @@ Route::post('/ask', function () {
 
     $q->body = Input::get('body');
 
-    $q->email = Input::get('email');
+    $q->user_id = Auth::user()->id;
 
     $q->save();
 
