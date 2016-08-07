@@ -39,6 +39,7 @@
     pre {
         font-size: 17px;
         white-space:pre-wrap;
+        word-wrap:break-word;
     }
 </style>
 @stop

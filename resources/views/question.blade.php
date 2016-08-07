@@ -86,6 +86,7 @@
         margin-left: 40px;
         font-size: 17px;
         white-space:pre-wrap;
+        word-wrap:break-word;
     }
 </style>
 @stop
