@@ -1,5 +1,10 @@
 @extends('layout/default')
+@section('head')
+    <title>{{$question->title}}</title>
 
+    <meta property="og:title" content="{{$question->title}}"/>
+    <meta property="og:description" content="{{mb_substr($question->body,0,100,"UTF-8")}}" />
+@stop
 @section('content')
 <div class="container">
     <div class="row">

@@ -1,5 +1,10 @@
 @extends('layout/default')
+@section('head')
+    <title>轉個彎方案：解決寫程式的各種問題</title>
 
+    <meta property="og:title" content="轉個彎方案：解決寫程式的各種問題"/>
+    <meta property="og:description" content="協助各位解決程式設計各種問題的問答網站。" />
+@stop
 @section('content')
 <div class="container">
     <div class="row">

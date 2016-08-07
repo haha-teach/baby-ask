@@ -1,9 +1,5 @@
 <html>
     <head>
-        <title>轉個彎方案：解決寫程式的各種問題</title>
-
-        <meta property="og:title" content="轉個彎方案：解決寫程式的各種問題"/>
-        <meta property="og:description" content="協助各位解決程式設計各種問題的問答網站。" />
         <meta property="og:image" content="http://class.turn.tw/wp-content/uploads/2016/07/boy.png" />
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
