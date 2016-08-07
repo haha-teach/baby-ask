@@ -1,6 +1,5 @@
 <html>
     <head>
-        <meta property="og:image" content="http://class.turn.tw/wp-content/uploads/2016/07/boy.png" />
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/css/skeleton-2.0.4/normalize.css">
