@@ -76,3 +76,43 @@ Route::post('/answer', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/comment/{type}/{id}', function ($type, $id) {
+    if (!Auth::check()) {
+        return Redirect::to('/login');
+    }
+
+    if ($type === 'question') {
+        $question = App\Question::find($id);
+
+        $answer = null;
+    } else if ($type === 'answer') {
+        $question = null;
+
+        $answer = App\Answer::find($id);
+    } else {
+        dd('Fail fast.');
+    }
+
+    return view('comment', ['question' => $question, 'answer' => $answer]);
+});
+
+Route::post('/comment', function () {
+    $c = new App\Comment();
+
+    if (Input::get('question_id')) {
+        $c->question_id = Input::get('question_id');
+    }
+
+    if (Input::get('answer_id')) {
+        $c->answer_id = Input::get('answer_id');
+    }
+
+    $c->body = Input::get('body');
+
+    $c->user_id = Auth::user()->id;
+
+    $c->save();
+
+    return Redirect::to('/');
+});

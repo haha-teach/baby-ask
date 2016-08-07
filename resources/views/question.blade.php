@@ -11,7 +11,7 @@
             <div class="asktime">發問時間：{{$question->created_at->format('Y-m-d H:i')}}</div>
             <div style="clear: both;"></div>
             <hr style='margin-top: 20px; margin-bottom: 20px; margin-left: 40px;'/>
-            <a style="margin-left: 40px;">新增推文</a>
+            <a style="margin-left: 40px;" href='/comment/question/{{$question->id}}'>新增推文</a>
 
             <!--
             <hr style='margin-top: 20px; margin-bottom: 20px;'/>
@@ -51,7 +51,7 @@
             </div>
             <div style="clear: both;"></div>
             <hr style='margin-top: 20px; margin-bottom: 20px; margin-left: 40px;'/>
-            <a style="margin-left: 40px;">新增推文</a>
+            <a style="margin-left: 40px;" href='/comment/answer/{{$answer->id}}'>新增推文</a>
 
             <!--
             <hr style='margin-top: 20px; margin-bottom: 20px;'/>
