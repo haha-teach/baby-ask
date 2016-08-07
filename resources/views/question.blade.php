@@ -10,8 +10,11 @@
             <br />
             <div class="asktime">發問時間：{{$question->created_at->format('Y-m-d H:i')}}</div>
             <div style="clear: both;"></div>
-            <hr style='margin-top: 20px; margin-bottom: 20px; margin-left: 40px;'/>
-            <a style="margin-left: 40px;" href='/comment/question/{{$question->id}}'>新增推文</a>
+            <hr style='margin-top: 20px; margin-bottom: 0px; margin-left: 40px;'/>
+            @foreach($question->comments as $comment)
+                @include('_comment')
+            @endforeach
+            <a style="margin-left: 40px; padding-top: 10px; display: block;" href='/comment/question/{{$question->id}}'>新增推文</a>
 
             <!--
             <hr style='margin-top: 20px; margin-bottom: 20px;'/>
@@ -50,8 +53,11 @@
                 <div class="name">回答之人：{{$answer->user->name}}</div>
             </div>
             <div style="clear: both;"></div>
-            <hr style='margin-top: 20px; margin-bottom: 20px; margin-left: 40px;'/>
-            <a style="margin-left: 40px;" href='/comment/answer/{{$answer->id}}'>新增推文</a>
+            <hr style='margin-top: 20px; margin-bottom: 0px; margin-left: 40px;'/>
+            @foreach($answer->comments as $comment)
+                @include('_comment')
+            @endforeach
+            <a style="margin-left: 40px; padding-top: 10px; display: block;" href='/comment/answer/{{$answer->id}}'>新增推文</a>
 
             <!--
             <hr style='margin-top: 20px; margin-bottom: 20px;'/>
