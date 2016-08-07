@@ -37,6 +37,12 @@
                     <li>請描述您做過哪些嘗試、試過哪些方法</li>
                     <li>請盡可能地提供細節，幫回答者節省時間</li>
                 </ul>
+                <h5>本月聲望排行</h5>
+                <ul>
+                    @foreach($users as $user)
+                    <li>{{$user->name}} ( {{$user->reputation}} )</li>
+                    @endforeach
+                </ul>
             </div>
         </div>
     </div>

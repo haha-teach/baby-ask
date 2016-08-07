@@ -14,7 +14,11 @@
 Route::get('/', function () {
     $questions = App\Question::all()->reverse();
 
-    return view('index', ['questions' => $questions]);
+    $users = App\User::where('reputation', '>', 0)->get();
+
+    $users = $users->sortByDesc('reputation');
+
+    return view('index', ['questions' => $questions, 'users' => $users]);
 });
 
 Route::get('/faq-reputation', function () {
