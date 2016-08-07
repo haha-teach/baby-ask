@@ -38,6 +38,10 @@ Route::post('/ask', function () {
 Route::get('/question/{id}', function ($id) {
     $question = App\Question::find($id);
 
+    $question->pageview += 1;
+
+    $question->save();
+
     return view('question', ['question' => $question]);
 });
 

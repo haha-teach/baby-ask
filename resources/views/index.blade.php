@@ -7,6 +7,16 @@
             <h5>最新問題</h5>
             @foreach($questions as $question)
             <div class="question-box">
+                <div class="info-list">
+                    <div class="info-box">
+                        <div class="label">{{ $question->answers->count() }}</div>
+                        <div class="value">回答</div>
+                    </div>
+                    <div class="info-box">
+                        <div class="label">{{ $question->pageview }}</div>
+                        <div class="value">瀏覽</div>
+                    </div>
+                </div>
                 <div class="title"><a href='/question/{{$question->id}}'>{{ $question->title }}</a></div>
                 <div class="time">發問時間：{{ $question->created_at->format('Y-m-d H:i') }}</div>
                 <div style="clear: both;"></div>
@@ -38,6 +48,22 @@
     .question-box > .time {
         color: #757575;
         float: right;
+    }
+    .info-list {
+        float: left;
+        width: 120px;
+    }
+    .info-box {
+        display: inline-block;
+        text-align: center;
+        padding: 5px 10px;
+        color: #616161;
+    }
+    .info-box > .label {
+
+    }
+    .info-box > .value {
+
     }
 </style>
 @stop
