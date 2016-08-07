@@ -40,7 +40,7 @@
                 <h5>本月聲望排行</h5>
                 <ul>
                     @foreach($users as $user)
-                    <li>{{$user->name}} ( {{$user->reputation}} )</li>
+                    <li>{{$user->name}} ( {{$user->reputation}} 分 )</li>
                     @endforeach
                 </ul>
             </div>
