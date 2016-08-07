@@ -22,8 +22,10 @@
                     <li><a href='/'>逛逛首頁</a></li>
                     <li><a href='/ask'>我要發問</a></li>
                     @if(Auth::check())
+                    <li><a href='/faq-reputation'>您的聲望：{{Auth::user()->reputation}}</a></li>
                     <li><a href='/logout'>我要登出</a></li>
                     @else
+                    <li><a href='/faq-reputation'>聲望系統</a></li>
                     <li><a href='/login'>我要登入</a></li>
                     <li><a href='/register'>我要註冊</a></li>
                     @endif

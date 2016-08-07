@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('index', ['questions' => $questions]);
 });
 
+Route::get('/faq-reputation', function () {
+    return view('faq-reputation');
+});
+
 Route::get('/ask', function () {
     if (!Auth::check()) {
         return Redirect::to('/login');
@@ -69,6 +73,10 @@ Route::post('/answer', function () {
     $a->user_id = Auth::user()->id;
 
     $a->save();
+
+    Auth::user()->reputation += 2;
+
+    Auth::user()->save();
 
     return Redirect::to('/');
 });
