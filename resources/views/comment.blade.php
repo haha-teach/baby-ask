@@ -14,7 +14,7 @@
                 @if ($answer)
                 <input type="hidden" name="answer_id" value="{{ $answer->id }}">
                 @endif
-                <input type="submit" value='送出推文' class="button-primary" />
+                <input type="submit" value='送出推文' class="button-primary" onclick="if ( confirm('確定送出？') ) { this.disabled=true; this.value='處理中，請稍候...'; this.form.submit(); }else{return false;};" />
             </form>
         </div>
         <div class="four columns">

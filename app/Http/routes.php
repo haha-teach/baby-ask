@@ -130,5 +130,21 @@ Route::post('/comment', function () {
 
     $c->save();
 
+    if (Input::get('question_id')) {
+        $question = App\Question::find(Input::get('question_id'));
+
+        Mail::send('emails.someone-commented', ['question' => $question], function ($m) use ($question) {
+            $m->to($question->user->email, $question->user->name)->subject('有人給了您一則推文留言');
+        });
+    }
+
+    if (Input::get('answer_id')) {
+        $answer = App\Answer::find(Input::get('answer_id'));
+
+        Mail::send('emails.someone-commented', ['question' => $answer->question], function ($m) use ($answer) {
+            $m->to($answer->user->email, $answer->user->name)->subject('有人給了您一則推文留言');
+        });
+    }
+
     return Redirect::to('/');
 });
