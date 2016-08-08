@@ -12,7 +12,7 @@
             <div class="container">
                 <div class="row header-box">
                     <br />
-                    <a href='/'><h4>轉個彎方案<span style="color: black; font-size: 18px; padding-left: 15px;" >互相討論，一起解決寫程式的各種問題</span></h4></a>
+                    <a href='/'><h4>轉個彎方案<span style="color: black; font-size: 18px; padding-left: 15px;" >分享，學習，解決寫程式的各種問題</span></h4></a>
                 </div>
             </div>
         </div>

@@ -15,11 +15,11 @@
             <br />
             <div class="asktime">發問時間：{{$question->created_at->format('Y-m-d H:i')}}</div>
             <div style="clear: both;"></div>
-            <hr style='margin-top: 20px; margin-bottom: 0px; margin-left: 40px;'/>
+            <hr style='margin-top: 20px; margin-bottom: 0px; margin-left: 60px;'/>
             @foreach($question->comments as $comment)
                 @include('_comment')
             @endforeach
-            <a style="margin-left: 40px; padding-top: 10px; display: block;" href='/comment/question/{{$question->id}}'>新增推文</a>
+            <a style="margin-left: 60px; padding-top: 10px; display: block;" href='/comment/question/{{$question->id}}'>新增推文</a>
 
             <!--
             <hr style='margin-top: 20px; margin-bottom: 20px;'/>
@@ -51,6 +51,15 @@
     <div class="row">
         <div class="eight columns">
             <hr style='margin-top: 20px; margin-bottom: 20px;'/>
+            <div style="float: left; width: 60px;">
+                <!--
+                <div class="score-box">
+                    <div class="up"></div>
+                    <div class="number">0</div>
+                </div>
+                -->
+            </div>
+
             <div><pre>{{ $answer->body }}</pre></div>
             <br />
             <div class="info-box">
@@ -58,11 +67,11 @@
                 <div class="name">回答之人：{{$answer->user->name}}</div>
             </div>
             <div style="clear: both;"></div>
-            <hr style='margin-top: 20px; margin-bottom: 0px; margin-left: 40px;'/>
+            <hr style='margin-top: 20px; margin-bottom: 0px; margin-left: 60px;'/>
             @foreach($answer->comments as $comment)
                 @include('_comment')
             @endforeach
-            <a style="margin-left: 40px; padding-top: 10px; display: block;" href='/comment/answer/{{$answer->id}}'>新增推文</a>
+            <a style="margin-left: 60px; padding-top: 10px; display: block;" href='/comment/answer/{{$answer->id}}'>新增推文</a>
 
             <!--
             <hr style='margin-top: 20px; margin-bottom: 20px;'/>
@@ -100,10 +109,33 @@
 
     }
     pre {
-        margin-left: 40px;
+        margin-left: 60px;
         font-size: 17px;
         white-space:pre-wrap;
         word-wrap:break-word;
+    }
+    .score-box {
+        text-align: center;
+        width: 40px;
+    }
+    .score-box > .up {
+      width: 0;
+      height: 0;
+
+      margin: 0 auto;
+
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+
+      border-bottom: 15px solid #757575;
+
+      margin-top: 10px;
+    }
+    .score-box > .number {
+        color: #757575;
+        text-align: center;
+        font-size: 22px;
+        margin-top: 10px;
     }
 </style>
 @stop
