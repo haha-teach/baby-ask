@@ -9,7 +9,7 @@
                 <textarea class="u-full-width" name='body'></textarea>
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <input type="hidden" name="question_id" value="{{ $question->id }}">
-                <input type="submit" value='Answer' class="button-primary" />
+                <input type="submit" value='Answer' class="button-primary" onclick="if ( confirm('確定送出？') ) { this.disabled=true; this.value='處理中，請稍候...'; this.form.submit(); }else{return false;};" />
             </form>
         </div>
         <div class="four columns">

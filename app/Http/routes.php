@@ -82,6 +82,10 @@ Route::post('/answer', function () {
 
     Auth::user()->save();
 
+    Mail::send('emails.someone-answered', ['answer' => $a], function ($m) use ($a) {
+        $m->to($a->question->user->email, $a->question->user->name)->subject('Re: ' . $a->question->title);
+    });
+
     return Redirect::to('/');
 });
 
