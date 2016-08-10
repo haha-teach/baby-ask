@@ -11,8 +11,7 @@
         <div style='background-color: #1abc9c;'>
             <div class="container">
                 <div class="row header-box">
-                    <br />
-                    <a href='/'><h4>轉個彎方案<span style="color: black; font-size: 18px; padding-left: 15px;" >分享，學習，解決寫程式的各種問題</span></h4></a>
+                    <a href='/'><h4 style="font-size: 24px; padding-top: 10px; padding-bottom: 10px; margin-bottom: 0;">轉個彎方案<span style="color: black; font-size: 16px; padding-left: 15px;" >利用社群力量解決寫程式的問題</span></h4></a>
                 </div>
             </div>
         </div>

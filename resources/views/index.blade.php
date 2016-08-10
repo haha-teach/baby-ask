@@ -10,7 +10,7 @@
 <div class="container">
     <div class="row">
         <div class="eight columns">
-            <h5>最新問題</h5>
+            <h5 style="margin-bottom: 5px;">最新問題</h5>
             @foreach($questions as $question)
             <div class="question-box">
                 <div class="info-list">
@@ -53,7 +53,8 @@
 <style>
     .question-box {
         border-top: 1px solid #e9e9e9;
-        padding: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         position: relative;
     }
     .question-box > .title {
