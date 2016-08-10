@@ -13,6 +13,14 @@
             <hr style='margin-top: 20px; margin-bottom: 20px;'/>
             <div><pre>{{ $question->body }}</pre></div>
             <br />
+            <div class="tag-box">
+            @foreach($question->tags as $tag)
+                <div class="tag">
+                    {{ $tag->name }}
+                </div>
+            @endforeach
+            </div>
+
             <div class="asktime">發問時間：{{$question->created_at->format('Y-m-d H:i')}}</div>
             <div style="clear: both;"></div>
             <hr style='margin-top: 20px; margin-bottom: 0px; margin-left: 60px;'/>
@@ -136,6 +144,9 @@
         text-align: center;
         font-size: 22px;
         margin-top: 10px;
+    }
+    .tag-box {
+        margin-left: 60px;
     }
 </style>
 @stop

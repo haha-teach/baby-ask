@@ -23,3 +23,9 @@ ul.nav-bar {
 .ask-form > textarea {
     height: 290px;
 }
+.tag-box > .tag {
+    display: inline-block;
+    background-color: #9E9E9E;
+    color: white;
+    padding: 2px 7px;
+}

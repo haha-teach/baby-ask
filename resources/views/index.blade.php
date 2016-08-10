@@ -98,11 +98,5 @@
         float: left;
         padding-top: 5px;
     }
-    .tag-box > .tag {
-        display: inline-block;
-        background-color: #9E9E9E;
-        color: white;
-        padding: 2px 7px;
-    }
 </style>
 @stop
