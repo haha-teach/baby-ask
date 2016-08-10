@@ -22,4 +22,9 @@ class Question extends Model
         return $this->belongsTo('App\User');
     }
 
+    function tags()
+    {
+        return $this->belongsToMany('App\Tag');
+    }
+
 }

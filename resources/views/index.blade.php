@@ -23,8 +23,18 @@
                         <div class="value">瀏覽</div>
                     </div>
                 </div>
-                <div class="title"><a href='/question/{{$question->id}}'>{{ $question->title }}</a></div>
-                <div class="time">發問時間：{{ $question->created_at->format('Y-m-d H:i') }}</div>
+                <div class="summary-box">
+                    <div class="title"><a href='/question/{{$question->id}}'>{{ $question->title }}</a></div>
+                    <div class="tag-box">
+                    @foreach($question->tags as $tag)
+                        <div class="tag">
+                            {{ $tag->name }}
+                        </div>
+                    @endforeach
+                    </div>
+                    <div class="time">發問時間：{{ $question->created_at->format('Y-m-d H:i') }}</div>
+                    <div style="clear: both;"></div>
+                </div>
                 <div style="clear: both;"></div>
             </div>
             @endforeach
@@ -60,7 +70,7 @@
     .question-box > .title {
         margin-bottom: 10px;
     }
-    .question-box > .time {
+    .question-box .time {
         color: #757575;
         float: right;
     }
@@ -79,6 +89,20 @@
     }
     .info-box > .value {
 
+    }
+    .summary-box {
+        float: left;
+        width: calc(100% - 120px);
+    }
+    .tag-box {
+        float: left;
+        padding-top: 5px;
+    }
+    .tag-box > .tag {
+        display: inline-block;
+        background-color: #9E9E9E;
+        color: white;
+        padding: 2px 7px;
     }
 </style>
 @stop
