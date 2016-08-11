@@ -156,6 +156,10 @@ Route::get('/vote/{id}', function ($id) {
 
     $answer = App\Answer::find($id);
 
+    if ($answer->user->id === Auth::user()->id) {
+        return view('message', ['message' => '您不能給予自己的回答好評。']);
+    }
+
     $vote = App\Vote::where('answer_id', $answer->id)->where('user_id', Auth::user()->id)->first();
 
     if ($vote) {
