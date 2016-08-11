@@ -62,22 +62,10 @@
                 @endforeach
                 </div>
                 <style>
-                    .member-box > .info {
-                        display: inline-block;
+                    .member-box {
+                        background-color: #E8F5E9;
+                        padding: 5px 10px;
                     }
-                    .member-box .heart {
-                        width: 12px;
-                        margin-right: 5px;
-                    }
-                    .member-box .photo {
-                        width: 40px;
-                    }
-                    .member-box .reputation {
-                        color: #757575;
-                    }
-
-
-
                 </style>
                 <!--
                 <h5>本月聲望排行</h5>

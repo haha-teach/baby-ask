@@ -21,7 +21,17 @@
             @endforeach
             </div>
 
-            <div class="asktime">發問時間：{{$question->created_at->format('Y-m-d H:i')}}</div>
+            <div class="info-box">
+                <div class="asktime">發問時間：{{$question->created_at->format('Y-m-d H:i')}}</div>
+                <div class="member-box">
+                    <img class='photo' src='{{$question->user->getAvatar()}}' />
+                    <div class="info">
+                        <div class="name">{{$question->user->name}}</div>
+                        <div class="reputation"><img class="heart" src='/images/heart.png' />{{$question->user->reputation}}</div>
+                    </div>
+                </div>
+            </div>
+
             <div style="clear: both;"></div>
             <hr style='margin-top: 20px; margin-bottom: 0px; margin-left: 60px;'/>
             @foreach($question->comments as $comment)
@@ -97,7 +107,13 @@
             <br />
             <div class="info-box">
                 <div class="time">回答時間：{{$answer->created_at->format('Y-m-d H:i')}}</div>
-                <div class="name">回答之人：{{$answer->user->name}}</div>
+                <div class="member-box">
+                    <img class='photo' src='{{$answer->user->getAvatar()}}' />
+                    <div class="info">
+                        <div class="name">{{$answer->user->name}}</div>
+                        <div class="reputation"><img class="heart" src='/images/heart.png' />{{$answer->user->reputation}}</div>
+                    </div>
+                </div>
             </div>
             <div style="clear: both;"></div>
             <hr style='margin-top: 20px; margin-bottom: 0px; margin-left: 60px;'/>
@@ -129,11 +145,12 @@
 </div>
 <style>
     .asktime {
-        float: right;
         color: #757575;
     }
     .info-box {
         float: right;
+        background-color: #E8F5E9;
+        padding: 5px 10px;
     }
     .time {
         color: #757575;
