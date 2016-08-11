@@ -60,12 +60,37 @@
         <div class="eight columns">
             <hr style='margin-top: 20px; margin-bottom: 20px;'/>
             <div style="float: left; width: 60px;">
-                <!--
+
                 <div class="score-box">
-                    <div class="up"></div>
-                    <div class="number">0</div>
+                    <a href='/vote/{{$answer->id}}'><div class="up"></div></a>
+                    <div class="number">{{$answer->upvote_count}}</div>
                 </div>
-                -->
+                <style>
+                    .score-box {
+                        text-align: center;
+                        width: 40px;
+                    }
+                    .score-box .up {
+                      width: 0;
+                      height: 0;
+
+                      margin: 0 auto;
+
+                      border-left: 15px solid transparent;
+                      border-right: 15px solid transparent;
+
+                      border-bottom: 15px solid #757575;
+
+                      margin-top: 10px;
+                    }
+                    .score-box > .number {
+                        color: #757575;
+                        text-align: center;
+                        font-size: 22px;
+                        margin-top: 10px;
+                    }
+                </style>
+
             </div>
 
             <div><pre>{{ $answer->body }}</pre></div>
@@ -121,29 +146,6 @@
         font-size: 17px;
         white-space:pre-wrap;
         word-wrap:break-word;
-    }
-    .score-box {
-        text-align: center;
-        width: 40px;
-    }
-    .score-box > .up {
-      width: 0;
-      height: 0;
-
-      margin: 0 auto;
-
-      border-left: 15px solid transparent;
-      border-right: 15px solid transparent;
-
-      border-bottom: 15px solid #757575;
-
-      margin-top: 10px;
-    }
-    .score-box > .number {
-        color: #757575;
-        text-align: center;
-        font-size: 22px;
-        margin-top: 10px;
     }
     .tag-box {
         margin-left: 60px;

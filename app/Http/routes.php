@@ -148,3 +148,41 @@ Route::post('/comment', function () {
 
     return Redirect::to('/');
 });
+
+Route::get('/vote/{id}', function ($id) {
+    if (!Auth::check()) {
+        return Redirect::to('/login');
+    }
+
+    $answer = App\Answer::find($id);
+
+    $vote = App\Vote::where('answer_id', $answer->id)->where('user_id', Auth::user()->id)->first();
+
+    if ($vote) {
+        return view('message', ['message' => '同一個回答，您只能給予一次好評。']);
+    }
+
+    return view('vote', ['answer' => $answer]);
+});
+
+Route::post('/vote', function () {
+    $answer = App\Answer::find(Input::get('answer_id'));
+
+    $answer->upvote_count += 1;
+
+    $answer->save();
+
+    $vote = new App\Vote();
+
+    $vote->answer_id = $answer->id;
+
+    $vote->user_id = Auth::user()->id;
+
+    $vote->save();
+
+    $answer->user->reputation += 10;
+
+    $answer->user->save();
+
+    return Redirect::to('/question/' . $answer->question->id);
+});
