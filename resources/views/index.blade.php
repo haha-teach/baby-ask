@@ -1,9 +1,9 @@
 @extends('layout/default')
 @section('head')
-    <title>轉個彎方案：分享，學習，解決寫程式的各種問題</title>
+    <title>轉個彎方案：社群力量解決程式問題</title>
 
-    <meta property="og:title" content="轉個彎方案：分享，學習，解決寫程式的各種問題"/>
-    <meta property="og:description" content="協助各位解決程式設計各種問題的問答網站。" />
+    <meta property="og:title" content="轉個彎方案：社群力量解決程式問題"/>
+    <meta property="og:description" content="社群力量解決程式設計問題的問答網站。" />
     <meta property="og:image" content="http://class.turn.tw/wp-content/uploads/2016/07/boy.png" />
 @stop
 @section('content')
@@ -47,6 +47,38 @@
                     <li>請描述您做過哪些嘗試、試過哪些方法</li>
                     <li>請盡可能地提供細節，幫回答者節省時間</li>
                 </ul>
+
+
+                <h5>熱心會員</h5>
+                <div class="top-members">
+                @foreach($users as $user)
+                <div class="member-box">
+                    <img class='photo' src='{{$user->getAvatar()}}' />
+                    <div class="info">
+                        <div class="name">{{$user->name}}</div>
+                        <div class="reputation"><img class="heart" src='/images/heart.png' />{{$user->reputation}}</div>
+                    </div>
+                </div>
+                @endforeach
+                </div>
+                <style>
+                    .member-box > .info {
+                        display: inline-block;
+                    }
+                    .member-box .heart {
+                        width: 12px;
+                        margin-right: 5px;
+                    }
+                    .member-box .photo {
+                        width: 40px;
+                    }
+                    .member-box .reputation {
+                        color: #757575;
+                    }
+
+
+
+                </style>
                 <!--
                 <h5>本月聲望排行</h5>
                 <ul>
