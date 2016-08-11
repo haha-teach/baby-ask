@@ -65,6 +65,7 @@
                     .member-box {
                         background-color: #E8F5E9;
                         padding: 5px 10px;
+                        margin-bottom: 10px;
                     }
                 </style>
                 <!--
