@@ -26,7 +26,7 @@ class User extends Authenticatable
 
     function getAvatar()
     {
-        return $this->avatar ? : '/images/smial.png';
+        return $this->avatar ? : '/images/smile.png';
     }
 
 }
