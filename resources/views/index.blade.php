@@ -49,7 +49,7 @@
                 </ul>
 
 
-                <h5>熱心會員</h5>
+                <h5>熱心人士</h5>
                 <div class="top-members">
                 @foreach($users as $user)
                 <div class="member-box">
