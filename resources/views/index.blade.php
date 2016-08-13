@@ -1,8 +1,8 @@
 @extends('layout/default')
 @section('head')
-    <title>轉個彎方案：社群力量解決程式問題</title>
+    <title>程式設計互助論壇：社群力量解決程式問題</title>
 
-    <meta property="og:title" content="轉個彎方案：社群力量解決程式問題"/>
+    <meta property="og:title" content="程式設計互助論壇：社群力量解決程式問題"/>
     <meta property="og:description" content="社群力量解決程式設計問題的問答網站。" />
     <meta property="og:image" content="http://class.turn.tw/wp-content/uploads/2016/07/boy.png" />
 @stop
