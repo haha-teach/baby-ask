@@ -4,6 +4,7 @@
 
     <meta property="og:title" content="{{$question->title}}"/>
     <meta property="og:description" content="{{mb_substr($question->body,0,100,"UTF-8")}}" />
+    <meta property="og:image" content="{{ url('/images/green.png') }}" />
 @stop
 @section('content')
 <div class="container">
