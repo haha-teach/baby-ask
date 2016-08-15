@@ -133,20 +133,27 @@ Route::post('/comment', function () {
     if (Input::get('question_id')) {
         $question = App\Question::find(Input::get('question_id'));
 
-        Mail::send('emails.someone-commented', ['question' => $question], function ($m) use ($question) {
-            $m->to($question->user->email, $question->user->name)->subject('有人給了您一則推文留言');
-        });
+        if (Auth::user()->id !== $question->user->id) {
+            Mail::send('emails.someone-commented', ['question' => $question], function ($m) use ($question) {
+                $m->to($question->user->email, $question->user->name)->subject('有人給了您一則推文留言');
+            });
+        }
+
+        return Redirect::to('/question/' . $question->id);
     }
 
     if (Input::get('answer_id')) {
         $answer = App\Answer::find(Input::get('answer_id'));
 
-        Mail::send('emails.someone-commented', ['question' => $answer->question], function ($m) use ($answer) {
-            $m->to($answer->user->email, $answer->user->name)->subject('有人給了您一則推文留言');
-        });
+        if (Auth::user()->id !== $answer->user->id) {
+            Mail::send('emails.someone-commented', ['question' => $answer->question], function ($m) use ($answer) {
+                $m->to($answer->user->email, $answer->user->name)->subject('有人給了您一則推文留言');
+            });
+        }
+
+        return Redirect::to('/question/' . $answer->question->id);
     }
 
-    return Redirect::to('/');
 });
 
 Route::get('/vote/{id}', function ($id) {
