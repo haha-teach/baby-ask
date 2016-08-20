@@ -11,7 +11,7 @@
         <div style='background-color: #1abc9c;'>
             <div class="container">
                 <div class="row header-box">
-                    <a href='/'><h4 style="font-size: 24px; padding-top: 10px; padding-bottom: 10px; margin-bottom: 0;">程式設計互助論壇<span style="color: black; font-size: 16px; padding-left: 15px;" >社群力量解決程式問題</span></h4></a>
+                    <a href='/'><h4 style="font-size: 24px; padding-top: 10px; padding-bottom: 10px; margin-bottom: 0;">轉角遇到 Bug<span style="color: black; font-size: 16px; padding-left: 15px;" >問問別人怎麼辦</span></h4></a>
                 </div>
             </div>
         </div>
