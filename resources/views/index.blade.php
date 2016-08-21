@@ -41,13 +41,7 @@
         </div>
         <div class="four columns">
             <div>
-                <h5>發問注意事項</h5>
-                <ul>
-                    <li>請盡量清楚描述您的問題</li>
-                    <li>請描述您做過哪些嘗試、試過哪些方法</li>
-                    <li>請盡可能地提供細節，幫回答者節省時間</li>
-                </ul>
-
+                @include('_ask-rule')
 
                 <h5>熱心人士</h5>
                 <div class="top-members">
