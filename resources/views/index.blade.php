@@ -1,9 +1,9 @@
 @extends('layout/default')
 @section('head')
-    <title>轉角遇到 Bug：問問別人怎麼辦</title>
+    <title>轉個彎發問</title>
 
-    <meta property="og:title" content="轉角遇到 Bug：問問別人怎麼辦"/>
-    <meta property="og:description" content="社群力量解決程式設計問題的問答網站。" />
+    <meta property="og:title" content="轉角遇到 Bug"/>
+    <meta property="og:description" content="社群力量解決程式設計問題。" />
     <meta property="og:image" content="http://class.turn.tw/wp-content/uploads/2016/07/boy.png" />
 @stop
 @section('content')
@@ -63,7 +63,7 @@
                     }
                 </style>
                 <!--
-                <h5>本月聲望排行</h5>
+                <h5>本月熱心排行</h5>
                 <ul>
                     @foreach($users as $user)
                     <li>{{$user->name}} ( {{$user->reputation}} 分 )</li>

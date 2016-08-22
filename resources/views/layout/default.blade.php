@@ -11,7 +11,7 @@
         <div style='background-color: #1abc9c;'>
             <div class="container">
                 <div class="row header-box">
-                    <a href='/'><h4 style="font-size: 24px; padding-top: 10px; padding-bottom: 10px; margin-bottom: 0;">轉角遇到 Bug<span style="color: black; font-size: 16px; padding-left: 15px;" >問問別人怎麼辦</span></h4></a>
+                    <a href='/'><h4 style="font-size: 24px; padding-top: 10px; padding-bottom: 10px; margin-bottom: 0;">轉個彎發問<span style="color: black; font-size: 16px; padding-left: 15px;" ><!--問問別人怎麼辦--></span></h4></a>
                 </div>
             </div>
         </div>
@@ -21,10 +21,10 @@
                     <li><a href='/'>逛逛首頁</a></li>
                     <li><a href='/ask'>我要發問</a></li>
                     @if(Auth::check())
-                    <li><a href='/faq-reputation'>您的聲望：{{Auth::user()->reputation}}</a></li>
+                    <li><a href='/faq-reputation'>您的熱心：{{Auth::user()->reputation}}</a></li>
                     <li><a href='/logout'>我要登出</a></li>
                     @else
-                    <li><a href='/faq-reputation'>聲望系統</a></li>
+                    <li><a href='/faq-reputation'>熱心系統</a></li>
                     <li><a href='/login'>我要登入</a></li>
                     <li><a href='/register'>我要註冊</a></li>
                     @endif

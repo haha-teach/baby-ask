@@ -6,10 +6,10 @@ a {
     color: white;
 }
 .nav-bar {
-    padding-top: 20px;
+    padding-top: 10px;
 }
 ul.nav-bar {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 .nav-bar > li{
@@ -18,7 +18,9 @@ ul.nav-bar {
     padding-left: 20px;
     margin-bottom: 10px;
 }
-
+.nav-bar > li > a{
+    font-size: 14px;
+}
 .ask-form > textarea {
     height: 290px;
 }
